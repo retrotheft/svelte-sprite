@@ -1,0 +1,229 @@
+/*
+-------------------------------------------------------------------
+Created with TexturePacker https://www.codeandweb.com/texturepacker
+-------------------------------------------------------------------
+Inline:     <i class="yourspritesname"></i>
+Responsive: <div class="yourspritesname"></div>
+*/
+
+.climb-1 {max-width:49px; max-height:49px; }
+.climb-1::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 0% 0%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.climb-1::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.climb-2 {max-width:49px; max-height:49px; }
+.climb-2::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 0% 25%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.climb-2::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.crouch {max-width:49px; max-height:49px; }
+.crouch::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 0% 75%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.crouch::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.crouch-shoot-up {max-width:49px; max-height:49px; }
+.crouch-shoot-up::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 0% 50%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.crouch-shoot-up::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.idle {max-width:49px; max-height:49px; }
+.idle::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 0% 100%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.idle::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.run-1 {max-width:49px; max-height:49px; }
+.run-1::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 25% 0%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.run-1::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.run-2 {max-width:49px; max-height:49px; }
+.run-2::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 50% 0%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.run-2::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.run-3 {max-width:49px; max-height:49px; }
+.run-3::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 75% 0%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.run-3::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.run-crouch {max-width:49px; max-height:49px; }
+.run-crouch::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 25% 50%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.run-crouch::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.run-crouch-shoot {max-width:49px; max-height:49px; }
+.run-crouch-shoot::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 25% 25%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.run-crouch-shoot::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.run-crouch-shoot-up {max-width:49px; max-height:49px; }
+.run-crouch-shoot-up::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 100% 0%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.run-crouch-shoot-up::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.run-shoot-1 {max-width:49px; max-height:49px; }
+.run-shoot-1::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 25% 75%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.run-shoot-1::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.run-shoot-2 {max-width:49px; max-height:49px; }
+.run-shoot-2::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 25% 100%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.run-shoot-2::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.run-shoot-3 {max-width:49px; max-height:49px; }
+.run-shoot-3::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 50% 25%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.run-shoot-3::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.run-shoot-up-1 {max-width:49px; max-height:49px; }
+.run-shoot-up-1::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 75% 25%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.run-shoot-up-1::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.run-shoot-up-2 {max-width:49px; max-height:49px; }
+.run-shoot-up-2::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 100% 25%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.run-shoot-up-2::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.run-shoot-up-3 {max-width:49px; max-height:49px; }
+.run-shoot-up-3::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 50% 50%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.run-shoot-up-3::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.shoot-up {max-width:49px; max-height:49px; }
+.shoot-up::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 50% 75%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.shoot-up::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.somersault-1 {max-width:49px; max-height:49px; }
+.somersault-1::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 50% 100%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.somersault-1::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.somersault-2 {max-width:49px; max-height:49px; }
+.somersault-2::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 75% 50%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.somersault-2::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.somersault-3 {max-width:49px; max-height:49px; }
+.somersault-3::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 100% 50%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.somersault-3::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.somersault-4 {max-width:49px; max-height:49px; }
+.somersault-4::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 75% 75%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.somersault-4::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+.stand-shoot {max-width:49px; max-height:49px; }
+.stand-shoot::after {content: '\00a0';display: inline-block; width:49px; height:49px; background-position: 75% 100%; background-size: 500% 500%; background-image: url(samus.png);padding: 0; }
+div.stand-shoot::after {max-width:49px; width:100%;height:0;padding: 0 0 100% 0;}
+
+@keyframes climb-frames {
+    0% { background-position: 0% 0%;  }
+    50% { background-position: 0% 25%;  }
+}
+
+.climb-animation {
+    max-width: 49px;
+    max-height: 49px;
+}
+.climb-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 49px;
+    height: 49px;
+    padding: 0;
+    background-image: url(samus.png);
+    background-size: 500% 500%; 
+    animation-name: climb-frames;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+div.climb-animation::after {
+    max-width: 49px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 100% 0;
+}
+
+@keyframes run-frames {
+    0% { background-position: 25% 0%;  }
+    33.33333333333333% { background-position: 50% 0%;  }
+    66.66666666666666% { background-position: 75% 0%;  }
+}
+
+.run-animation {
+    max-width: 49px;
+    max-height: 49px;
+}
+.run-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 49px;
+    height: 49px;
+    padding: 0;
+    background-image: url(samus.png);
+    background-size: 500% 500%; 
+    animation-name: run-frames;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+div.run-animation::after {
+    max-width: 49px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 100% 0;
+}
+
+@keyframes run-shoot-frames {
+    0% { background-position: 25% 75%;  }
+    33.33333333333333% { background-position: 25% 100%;  }
+    66.66666666666666% { background-position: 50% 25%;  }
+}
+
+.run-shoot-animation {
+    max-width: 49px;
+    max-height: 49px;
+}
+.run-shoot-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 49px;
+    height: 49px;
+    padding: 0;
+    background-image: url(samus.png);
+    background-size: 500% 500%; 
+    animation-name: run-shoot-frames;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+div.run-shoot-animation::after {
+    max-width: 49px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 100% 0;
+}
+
+@keyframes run-shoot-up-frames {
+    0% { background-position: 75% 25%;  }
+    33.33333333333333% { background-position: 100% 25%;  }
+    66.66666666666666% { background-position: 50% 50%;  }
+}
+
+.run-shoot-up-animation {
+    max-width: 49px;
+    max-height: 49px;
+}
+.run-shoot-up-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 49px;
+    height: 49px;
+    padding: 0;
+    background-image: url(samus.png);
+    background-size: 500% 500%; 
+    animation-name: run-shoot-up-frames;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+div.run-shoot-up-animation::after {
+    max-width: 49px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 100% 0;
+}
+
+@keyframes somersault-frames {
+    0% { background-position: 50% 100%;  }
+    25% { background-position: 75% 50%;  }
+    50% { background-position: 100% 50%;  }
+    75% { background-position: 75% 75%;  }
+}
+
+.somersault-animation {
+    max-width: 49px;
+    max-height: 49px;
+}
+.somersault-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 49px;
+    height: 49px;
+    padding: 0;
+    background-image: url(samus.png);
+    background-size: 500% 500%; 
+    animation-name: somersault-frames;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+div.somersault-animation::after {
+    max-width: 49px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 100% 0;
+}
+
+/* $TexturePacker:SmartUpdate:1ae8a98c855f212f714250a11e364d5e:710b4779e0bcc86667fb31d96774b4f8:2bce77daf2c6e9ed8b3acee0bf541220$ */
