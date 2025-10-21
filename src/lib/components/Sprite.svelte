@@ -1,18 +1,6 @@
 <script lang="ts">
-   import { fly } from "svelte/transition";
-
    let { children = undefined, enter = false, ...attachments } = $props()
 </script>
-
-<!-- {#if enter}
-   <div in:fly={{ x: 100 }} {...attachments} data-sprite="true">
-      {@render children?.()}
-   </div>
-{:else}
-   <div {...attachments} data-sprite="true">
-      {@render children?.()}
-   </div>
-{/if} -->
 
 <div {...attachments} data-sprite="true" data-fly={!!enter}>
    {@render children?.()}

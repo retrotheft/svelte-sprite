@@ -1,8 +1,10 @@
 <script lang="ts">
-   import KnightWalk from "$lib/components/KnightWalk.svelte";
-   import KnightBattle from "$lib/components/KnightBattle.svelte";
-   import DemonFlying from "$lib/components/DemonFlying.svelte";
-   import DemonBattle from "$lib/components/DemonBattle.svelte";
+   import './_test-lib/assets/Knight-Walk.css'
+   import './_test-lib/assets/Knight-Battle.css'
+   import './_test-lib/assets/Demon-Battle.css'
+   import KnightWalk from "./_test-lib/components/KnightWalk.svelte";
+   import BattleEntity from "./_test-lib/components/BattleEntity.svelte";
+   import { knightConfig, demonConfig } from "./_test-lib/config.js";
    import { type SvelteComponent } from 'svelte'
    import Scene from '$lib/components/Scene.svelte'
 
@@ -41,12 +43,24 @@
          <div></div>
          <!-- <DemonFlying /> -->
       {:else}
-         <KnightBattle attack={attack("KNIGHT")} bind:this={knight} {endGame} />
-         <DemonBattle attack={attack("DEMON")} bind:this={demon} {endBattle} />
+         <BattleEntity
+            config={knightConfig}
+            attack={attack("KNIGHT")}
+            bind:this={knight}
+            endCallback={endGame}
+         />
+         <BattleEntity
+            config={demonConfig}
+            attack={attack("DEMON")}
+            bind:this={demon}
+            endCallback={endBattle}
+            enter
+         />
       {/if}
    {/key}
 </Scene>
-<footer>Enemies Killed: { enemiesKilled }</footer>
+
+<footer>Enemies Killed: {enemiesKilled}</footer>
 
 <style>
    footer {

@@ -1,3 +1,3 @@
 # Todo
 
-- [x] Make wrapper component for scene (to set custom variables and context)
+- [ ] create better transitions with attachments (could be an `attach-this` problem)
