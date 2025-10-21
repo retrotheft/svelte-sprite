@@ -4,11 +4,19 @@
    import { createAnimationHandler } from '$lib/attachments/animations.svelte.js';
    import Progress from '$lib/components/Progress.svelte'
 
-   let { attack, endGame } = $props()
+   let { attack, endGame, FRAME_DURATION } = $props()
+
+   const STATES_WITH_FRAMES = {
+      ['ATTACK-1']: 6,
+      IDLE: 7,
+      HURT: 4,
+      DEATH: 12
+   } as const
 
    const STATES = ['ATTACK-1', 'IDLE', 'HURT', 'DEATH'] as const
+   const TIME_PER_FRAME = 500 // also set in +page.svelte for now
 
-   const sprite = createSprite(STATES, {
+   const sprite = createSprite(STATES_WITH_FRAMES, {
       width: '96px',
       height: '84px'
    })
@@ -43,7 +51,7 @@
          cancel: () => {}
       },
       ['ATTACK-1']: {
-         start: () => setTimeout(() => attack(1), 270),
+         start: () => setTimeout(() => attack(1), FRAME_DURATION * 3),
          end: () => $sprite = "IDLE",
          cancel: () => {}
       },

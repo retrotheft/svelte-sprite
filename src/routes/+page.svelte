@@ -31,9 +31,11 @@
       mode = 'walk'
       enemiesKilled = 0
    }
+
+   const FRAME_DURATION = 75
 </script>
 
-<main>
+<main style={`--frame-duration: ${FRAME_DURATION}ms;`}>
    {#key gameNum}
       {#if mode === 'walk'}
          <span></span>
@@ -42,8 +44,8 @@
          <div></div>
          <!-- <DemonFlying /> -->
       {:else}
-         <KnightBattle attack={attack("KNIGHT")} bind:this={knight} {endGame} />
-         <DemonBattle attack={attack("DEMON")} bind:this={demon} {endBattle} />
+         <KnightBattle attack={attack("KNIGHT")} bind:this={knight} {endGame} {FRAME_DURATION} />
+         <DemonBattle attack={attack("DEMON")} bind:this={demon} {endBattle} {FRAME_DURATION} />
       {/if}
    {/key}
 </main>

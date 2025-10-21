@@ -31,7 +31,7 @@ div.WALK-6::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
 .WALK-7::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 98.98989898989899% 99.61089494163424%; background-size: 203.125% 405.95238095238096%; background-image: url(Knight-Walk.png);padding: 0; }
 div.WALK-7::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
 
-@keyframes WALK-frames {
+@keyframes WALK {
     0% { background-position: 1.0101010101010102% 0.38910505836575876%;  }
     12.5% { background-position: 98.98989898989899% 0.38910505836575876%;  }
     25% { background-position: 1.0101010101010102% 33.463035019455255%;  }
@@ -53,8 +53,8 @@ div.WALK-7::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
     height: 84px;
     padding: 0;
     background-image: url(Knight-Walk.png);
-    background-size: 203.125% 405.95238095238096%; 
-    animation-name: WALK-frames;
+    background-size: 203.125% 405.95238095238096%;
+    animation-name: WALK;
     animation-timing-function: steps(1);
     animation-duration: 1s;
     animation-iteration-count: infinite;

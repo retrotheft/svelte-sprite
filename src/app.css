@@ -11,3 +11,7 @@ body {
 div#app {
    display: contents;
 }
+
+div::after {
+   animation-duration: calc(var(--frames) * var(--frame-duration)) !important;
+}

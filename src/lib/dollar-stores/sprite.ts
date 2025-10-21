@@ -18,44 +18,54 @@ function assertIsHTMLElement(element: unknown): asserts element is HTMLElement {
   }
 }
 
+type StatesWithFrames = Record<string, number>
+
 type SpriteFactory<T extends string> = {
    (_state: T): Attachment
 } & StoreContract<T>
 
-export function createSprite<const T extends readonly string[]>(states: T, options: Options): SpriteFactory<T[number]> {
-   let state = states[0] as T[number]
-   const subscribers = new Set<(value: T[number]) => void>()
+export function createSprite<const T extends StatesWithFrames>(
+   statesWithFrames: T,
+   options: Options
+): SpriteFactory<keyof T & string> {
+   type State = keyof T & string
+
+   let state = '' as State
+   const subscribers = new Set<(value: State) => void>()
 
    function notifySubscribers(): void {
       subscribers.forEach(callback => callback(state))
    }
 
-   const store: StoreContract<T[number]> = {
-      subscribe: (callback: (value: T[number]) => void) => {
+   const store: StoreContract<State> = {
+      subscribe: (callback: (value: State) => void) => {
          subscribers.add(callback)
          callback(state)
          return () => subscribers.delete(callback)
       },
-      set: (newState: T[number]) => {
+      set: (newState: State) => {
          state = newState
          notifySubscribers()
       },
-      update: (fn: (current: T[number]) => T[number]) => {
+      update: (fn: (current: State) => State) => {
          state = fn(state)
          notifySubscribers()
       }
    }
 
-   const attachmentFactory = (_state: T[number]) => {
-      untrack(() => store.set(_state)) // svelte don't like this kind of behaviour
+   const attachmentFactory = (_state: State) => {
+      untrack(() => store.set(_state))
       return (element: Element) => {
-         // will never run again because _state is a primitive
          assertIsHTMLElement(element)
          element.style.width = options.width
          element.style.height = options.height
-         const callback = (_state: T[number]) => {
+
+         const callback = (_state: State) => {
             element.className = `${_state}-animation`
+            // Set --frames CSS variable
+            element.style.setProperty('--frames', String(statesWithFrames[_state]))
          }
+
          const unsubscribe = store.subscribe(callback)
          return unsubscribe
       }
@@ -65,6 +75,5 @@ export function createSprite<const T extends readonly string[]>(states: T, optio
    for (const [key, value] of entries(store)) {
       defineProperty(attachmentFactory, key, { value })
    }
-
-   return attachmentFactory as SpriteFactory<T[number]>
+   return attachmentFactory as SpriteFactory<State>
 }
