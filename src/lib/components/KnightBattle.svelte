@@ -6,9 +6,9 @@
 
    let { attack, endGame } = $props()
 
-   const sprite = createSprite(
-   ['ATTACK-1', 'IDLE', 'HURT', 'DEATH'] as const,
-   {
+   const STATES = ['ATTACK-1', 'IDLE', 'HURT', 'DEATH'] as const
+
+   const sprite = createSprite(STATES, {
       width: '96px',
       height: '84px'
    })
@@ -37,9 +37,7 @@
       $sprite = 'DEATH'
    }
 
-   // const states =
-
-   const stateMachine = {
+   const anim = createAnimationHandler(STATES, {
       IDLE: {
          iterate: () => loop(),
          cancel: () => {}
@@ -54,10 +52,8 @@
       },
       DEATH: {
          end: () => endGame()
-      },
-   }
-
-   const anim = createAnimationHandler(stateMachine)
+      }
+   })
 
    // animation handler routes each animationevent to stateMachine[animationName].hook
    // need an elegant way to make cancelable (is the presence of cancel enough?)

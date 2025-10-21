@@ -1,12 +1,14 @@
 type AnimationHook = (e: AnimationEvent) => void
 
-type Hooks = {
-   [key: string]: {
-      start?: AnimationHook,
-      end?: AnimationHook,
-      cancel?: AnimationHook,
-      iterate?: AnimationHook
-   }
+type HookConfig = {
+   start?: AnimationHook,
+   end?: AnimationHook,
+   cancel?: AnimationHook,
+   iterate?: AnimationHook
+}
+
+type Hooks<T extends readonly string[]> = {
+   [K in T[number]]?: HookConfig
 }
 
 type Handlers = {
@@ -16,13 +18,14 @@ type Handlers = {
    onanimationiteration?: (e: AnimationEvent) => void
 }
 
-export function createAnimationHandler(hooks: Hooks): Handlers {
+export function createAnimationHandler<const T extends readonly string[]>(
+   states: T, hooks: Hooks<T>): Handlers {
    const handlers: Handlers = {}
 
-   handlers.onanimationstart = e => hooks[e.animationName]?.start?.(e)
-   handlers.onanimationend = e => hooks[e.animationName]?.end?.(e)
-   handlers.onanimationiteration = e => hooks[e.animationName]?.iterate?.(e)
-   handlers.onanimationcancel = e => hooks[e.animationName]?.cancel?.(e)
+   handlers.onanimationstart = e => hooks[e.animationName as T[number]]?.start?.(e)
+   handlers.onanimationend = e => hooks[e.animationName as T[number]]?.end?.(e)
+   handlers.onanimationiteration = e => hooks[e.animationName as T[number]]?.iterate?.(e)
+   handlers.onanimationcancel = e => hooks[e.animationName as T[number]]?.cancel?.(e)
 
    return handlers
 }

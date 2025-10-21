@@ -7,9 +7,9 @@
 
    let { attack, endBattle } = $props();
 
-   const sprite = createSprite(
-      ["DEMON-IDLE", "DEMON-ATTACK", "DEMON-HURT", "DEMON-DEATH"] as const,
-      {
+   const STATES = ["DEMON-IDLE", "DEMON-ATTACK", "DEMON-HURT", "DEMON-DEATH"] as const
+
+   const sprite = createSprite(STATES, {
          width: "81px",
          height: "71px",
       },
@@ -32,7 +32,7 @@
       if (hp <= 0) $sprite = "DEMON-DEATH";
    }
 
-   const anim = createAnimationHandler({
+   const anim = createAnimationHandler(STATES, {
       ["DEMON-IDLE"]: {
          iterate: () => loop(),
          cancel: () => {},

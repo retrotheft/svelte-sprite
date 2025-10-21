@@ -47,8 +47,7 @@ export function createSprite<const T extends readonly string[]>(states: T, optio
    }
 
    const attachmentFactory = (_state: T[number]) => {
-      untrack(() => store.set(_state))
-      // store.set(_state)
+      untrack(() => store.set(_state)) // svelte don't like this kind of behaviour
       return (element: Element) => {
          // will never run again because _state is a primitive
          assertIsHTMLElement(element)
