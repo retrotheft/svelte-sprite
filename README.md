@@ -1,3 +1,3 @@
-# Elementary Game Engine
+# Svelte-Sprite
 
-A tiny game engine made with Svelte
+A collection of tools for working with sprites in Svelte. Can even be used as a simple game engine!
