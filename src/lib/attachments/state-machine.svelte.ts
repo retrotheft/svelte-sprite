@@ -1,7 +1,8 @@
 import { createAttachmentKey, type Attachment } from 'svelte/attachments'
 import { type StoreContract } from '$lib/types/index.js'
 
-type AnimationHook = (event: AnimationEvent) => void
+type AnimationHook = (event: AnimationEvent, vital: number) => void
+type AnimationHandler = (event: AnimationEvent) => void
 
 type Hooks<T extends Record<string, number>> = {
    start?: AnimationHook,
@@ -11,10 +12,10 @@ type Hooks<T extends Record<string, number>> = {
 } & { effect?: (args: T[keyof T]) => any }
 
 type Handlers = {
-   onanimationstart?: AnimationHook
-   onanimationend?: AnimationHook
-   onanimationcancel?: AnimationHook
-   onanimationiteration?: AnimationHook
+   onanimationstart?: AnimationHandler
+   onanimationend?: AnimationHandler
+   onanimationcancel?: AnimationHandler
+   onanimationiteration?: AnimationHandler
 }
 
 type Other = {
@@ -60,10 +61,10 @@ export function createStateMachine<TVital extends Record<string, number>>(_vital
       defineProperty(handlers, key, { value })
    }
 
-   if (hooks.start) handlers.onanimationstart = hooks.start
-   if (hooks.end) handlers.onanimationend = hooks.end
-   if (hooks.iterate) handlers.onanimationiteration = hooks.iterate
-   if (hooks.cancel) handlers.onanimationcancel = hooks.cancel
+   if (hooks.start) handlers.onanimationstart = (event) => hooks.start?.(event, vital)
+   if (hooks.end) handlers.onanimationend = (event) => hooks.end?.(event, vital)
+   if (hooks.iterate) handlers.onanimationiteration = (event) => hooks.iterate?.(event, vital)
+   if (hooks.cancel) handlers.onanimationcancel = (event) => hooks.cancel?.(event, vital)
 
    return handlers as Handlers & StoreContract<VitalValue<TVital>>
 }

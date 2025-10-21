@@ -1,0 +1,53 @@
+/*
+-------------------------------------------------------------------
+Created with TexturePacker https://www.codeandweb.com/texturepacker
+-------------------------------------------------------------------
+Inline:     <i class="yourspritesname"></i>
+Responsive: <div class="yourspritesname"></div>
+*/
+
+.FLYING-0 {max-width:81px; max-height:71px; }
+.FLYING-0::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 0.45871559633027525%; background-size: 102.46913580246914% 407.0422535211268%; background-image: url(Demon-Flying.png);padding: 0; }
+div.FLYING-0::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.FLYING-1 {max-width:81px; max-height:71px; }
+.FLYING-1::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 33.48623853211009%; background-size: 102.46913580246914% 407.0422535211268%; background-image: url(Demon-Flying.png);padding: 0; }
+div.FLYING-1::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.FLYING-2 {max-width:81px; max-height:71px; }
+.FLYING-2::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 66.5137614678899%; background-size: 102.46913580246914% 407.0422535211268%; background-image: url(Demon-Flying.png);padding: 0; }
+div.FLYING-2::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.FLYING-3 {max-width:81px; max-height:71px; }
+.FLYING-3::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 99.54128440366972%; background-size: 102.46913580246914% 407.0422535211268%; background-image: url(Demon-Flying.png);padding: 0; }
+div.FLYING-3::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+
+@keyframes FLYING-frames {
+    0% { background-position: 50% 0.45871559633027525%;  }
+    25% { background-position: 50% 33.48623853211009%;  }
+    50% { background-position: 50% 66.5137614678899%;  }
+    75% { background-position: 50% 99.54128440366972%;  }
+}
+
+.FLYING-animation {
+    max-width: 81px;
+    max-height: 71px;
+}
+.FLYING-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 81px;
+    height: 71px;
+    padding: 0;
+    background-image: url(Demon-Flying.png);
+    background-size: 102.46913580246914% 407.0422535211268%; 
+    animation-name: FLYING-frames;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+div.FLYING-animation::after {
+    max-width: 81px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 87.65432098765432% 0;
+}
+
+/* $TexturePacker:SmartUpdate:c80983f29470e1044729f69f17642e31:45313679044f371d623336f1e75e761d:1573d25419112da7da05f3c02a3d420f$ */

@@ -1,0 +1,206 @@
+/*
+-------------------------------------------------------------------
+Created with TexturePacker https://www.codeandweb.com/texturepacker
+-------------------------------------------------------------------
+Inline:     <i class="DEMON-yourspritesname"></i>
+Responsive: <div class="DEMON-yourspritesname"></div>
+*/
+
+.DEMON-ATTACK-0 {max-width:81px; max-height:71px; }
+.DEMON-ATTACK-0::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 0.06605019815059446%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-ATTACK-0::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-ATTACK-1 {max-width:81px; max-height:71px; }
+.DEMON-ATTACK-1::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 4.821664464993395%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-ATTACK-1::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-ATTACK-2 {max-width:81px; max-height:71px; }
+.DEMON-ATTACK-2::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 9.577278731836195%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-ATTACK-2::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-ATTACK-3 {max-width:81px; max-height:71px; }
+.DEMON-ATTACK-3::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 14.332892998678997%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-ATTACK-3::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-ATTACK-4 {max-width:81px; max-height:71px; }
+.DEMON-ATTACK-4::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 19.088507265521798%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-ATTACK-4::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-ATTACK-5 {max-width:81px; max-height:71px; }
+.DEMON-ATTACK-5::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 23.844121532364596%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-ATTACK-5::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-ATTACK-6 {max-width:81px; max-height:71px; }
+.DEMON-ATTACK-6::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 28.599735799207398%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-ATTACK-6::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-ATTACK-7 {max-width:81px; max-height:71px; }
+.DEMON-ATTACK-7::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 33.3553500660502%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-ATTACK-7::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-DEATH-0 {max-width:81px; max-height:71px; }
+.DEMON-DEATH-0::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 38.110964332893%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-DEATH-0::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-DEATH-1 {max-width:81px; max-height:71px; }
+.DEMON-DEATH-1::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 42.866578599735796%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-DEATH-1::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-DEATH-2 {max-width:81px; max-height:71px; }
+.DEMON-DEATH-2::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 47.6221928665786%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-DEATH-2::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-DEATH-3 {max-width:81px; max-height:71px; }
+.DEMON-DEATH-3::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 52.3778071334214%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-DEATH-3::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-DEATH-4 {max-width:81px; max-height:71px; }
+.DEMON-DEATH-4::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 57.133421400264204%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-DEATH-4::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-DEATH-5 {max-width:81px; max-height:71px; }
+.DEMON-DEATH-5::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 61.889035667107%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-DEATH-5::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-HURT-0 {max-width:81px; max-height:71px; }
+.DEMON-HURT-0::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 66.64464993394981%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-HURT-0::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-HURT-1 {max-width:81px; max-height:71px; }
+.DEMON-HURT-1::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 71.4002642007926%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-HURT-1::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-HURT-2 {max-width:81px; max-height:71px; }
+.DEMON-HURT-2::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 76.1558784676354%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-HURT-2::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-HURT-3 {max-width:81px; max-height:71px; }
+.DEMON-HURT-3::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 80.9114927344782%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-HURT-3::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-IDLE-0 {max-width:81px; max-height:71px; }
+.DEMON-IDLE-0::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 85.667107001321%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-IDLE-0::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-IDLE-1 {max-width:81px; max-height:71px; }
+.DEMON-IDLE-1::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 90.4227212681638%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-IDLE-1::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-IDLE-2 {max-width:81px; max-height:71px; }
+.DEMON-IDLE-2::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 95.17833553500661%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-IDLE-2::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+.DEMON-IDLE-3 {max-width:81px; max-height:71px; }
+.DEMON-IDLE-3::after {content: '\00a0';display: inline-block; width:81px; height:71px; background-position: 50% 99.93394980184941%; background-size: 102.46913580246914% 2232.394366197183%; background-image: url(Demon-Battle.png);padding: 0; }
+div.DEMON-IDLE-3::after {max-width:81px; width:100%;height:0;padding: 0 0 87.65432098765432% 0;}
+
+@keyframes DEMON-ATTACK {
+    0% { background-position: 50% 0.06605019815059446%;  }
+    12.5% { background-position: 50% 4.821664464993395%;  }
+    25% { background-position: 50% 9.577278731836195%;  }
+    37.5% { background-position: 50% 14.332892998678997%;  }
+    50% { background-position: 50% 19.088507265521798%;  }
+    62.5% { background-position: 50% 23.844121532364596%;  }
+    75% { background-position: 50% 28.599735799207398%;  }
+    87.5% { background-position: 50% 33.3553500660502%;  }
+}
+
+.DEMON-ATTACK-animation {
+    max-width: 81px;
+    max-height: 71px;
+}
+.DEMON-ATTACK-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 81px;
+    height: 71px;
+    padding: 0;
+    background-image: url(Demon-Battle.png);
+    background-size: 102.46913580246914% 2232.394366197183%;
+    animation-name: DEMON-ATTACK;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+div.DEMON-ATTACK-animation::after {
+    max-width: 81px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 87.65432098765432% 0;
+}
+
+@keyframes DEMON-DEATH {
+    0% { background-position: 50% 38.110964332893%;  }
+    16.666666666666664% { background-position: 50% 42.866578599735796%;  }
+    33.33333333333333% { background-position: 50% 47.6221928665786%;  }
+    50% { background-position: 50% 52.3778071334214%;  }
+    66.66666666666666% { background-position: 50% 57.133421400264204%;  }
+    83.33333333333334% { background-position: 50% 61.889035667107%;  }
+}
+
+.DEMON-DEATH-animation {
+    max-width: 81px;
+    max-height: 71px;
+}
+.DEMON-DEATH-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 81px;
+    height: 71px;
+    padding: 0;
+    background-image: url(Demon-Battle.png);
+    background-size: 102.46913580246914% 2232.394366197183%;
+    animation-name: DEMON-DEATH;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+div.DEMON-DEATH-animation::after {
+    max-width: 81px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 87.65432098765432% 0;
+}
+
+@keyframes DEMON-HURT {
+    0% { background-position: 50% 66.64464993394981%;  }
+    25% { background-position: 50% 71.4002642007926%;  }
+    50% { background-position: 50% 76.1558784676354%;  }
+    75% { background-position: 50% 80.9114927344782%;  }
+}
+
+.DEMON-HURT-animation {
+    max-width: 81px;
+    max-height: 71px;
+}
+.DEMON-HURT-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 81px;
+    height: 71px;
+    padding: 0;
+    background-image: url(Demon-Battle.png);
+    background-size: 102.46913580246914% 2232.394366197183%;
+    animation-name: DEMON-HURT;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+div.DEMON-HURT-animation::after {
+    max-width: 81px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 87.65432098765432% 0;
+}
+
+@keyframes DEMON-IDLE {
+    0% { background-position: 50% 85.667107001321%;  }
+    25% { background-position: 50% 90.4227212681638%;  }
+    50% { background-position: 50% 95.17833553500661%;  }
+    75% { background-position: 50% 99.93394980184941%;  }
+}
+
+.DEMON-IDLE-animation {
+    max-width: 81px;
+    max-height: 71px;
+}
+.DEMON-IDLE-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 81px;
+    height: 71px;
+    padding: 0;
+    background-image: url(Demon-Battle.png);
+    background-size: 102.46913580246914% 2232.394366197183%;
+    animation-name: DEMON-IDLE;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+div.DEMON-IDLE-animation::after {
+    max-width: 81px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 87.65432098765432% 0;
+}
+
+/* $TexturePacker:SmartUpdate:c7c465d21cb5f95d0b2b5ec180edc36c:46fcba572bf9ba07a213b5010259ea31:5cd1745d6a9b96086416acabe09129b4$ */

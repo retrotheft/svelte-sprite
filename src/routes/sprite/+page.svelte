@@ -2,31 +2,39 @@
    import './samus.css'
    import { createSprite } from '$lib/dollar-stores/sprite.js';
    import { createStateMachine } from "$lib/attachments/state-machine.svelte.js"
+   import random from 'random'
 
    const sprite = createSprite({
       width: '49px',
       height: '49px'
    })
 
-   const hp = createStateMachine({ hp: 10 }, {
-      // cancel: (event) => console.log("Animation Canceled", event),
-      // start: (event) => console.log("Animation Started", event),
-      iterate: (event) => hp.update(_hp => _hp + 1 ),
-      effect: (_hp) => _hp % 5 === 0 ? $sprite = 'run-shoot' : $sprite = "run"
+   const gameState = $state({
+      eventProbability: 0
    })
 
-   // const states = ['run', 'climb', 'somersault', 'run-shoot', 'run-shoot-up']
+   const hpFunc: Record<string, (event: AnimationEvent) => void> = {
+      ['run-frames']: (event: AnimationEvent) => console.log("Running!", event)
+   }
 
-   function onkeydown(event: KeyboardEvent) {
-      if (event.code === "ArrowUp") return $sprite = 'run-shoot-up'
-      if (event.code === "ArrowLeft") return $sprite = 'run'
-      if (event.code === "ArrowRight") return $sprite = 'run-shoot'
-      if (event.code === "ArrowDown") return $sprite = 'climb'
-      if (event.code === "Space") return $sprite = 'somersault'
+   const hp = createStateMachine({ hp: 10 }, {
+      // cancel: (event) => console.log("Animation Canceled", event),
+      start: (event, hp) => hpFunc[event.animationName]?.(event),
+      iterate: (event, hp) => gameLoop(),
+      // effect: (_hp) => console.log("Samus was hurt!", _hp)
+   })
+
+   const states = ['run', 'climb', 'somersault', 'run-shoot', 'run-shoot-up']
+
+   function gameLoop() {
+      gameState.eventProbability++
+      const roll = random.int(0, 100)
+      if (roll < gameState.eventProbability) {
+         $sprite = random.choice(states)!
+         gameState.eventProbability = 0
+      }
    }
 </script>
-
-<svelte:window {onkeydown} />
 
 <main>
    <div {@attach sprite('run')} {...hp}></div>
@@ -39,6 +47,6 @@
    }
 
    :global(div::after) {
-      animation-duration: 0.5s !important;
+      animation-duration: 0.4s !important;
    }
 </style>

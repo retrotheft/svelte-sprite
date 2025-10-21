@@ -1,0 +1,234 @@
+/*
+-------------------------------------------------------------------
+Created with TexturePacker https://www.codeandweb.com/texturepacker
+-------------------------------------------------------------------
+Inline:     <i class="yourspritesname"></i>
+Responsive: <div class="yourspritesname"></div>
+*/
+
+.ATTACK-1-0 {max-width:96px; max-height:84px; }
+.ATTACK-1-0::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 0.2564102564102564% 0.234192037470726%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.ATTACK-1-0::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.ATTACK-1-1 {max-width:96px; max-height:84px; }
+.ATTACK-1-1::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 25.128205128205128% 0.234192037470726%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.ATTACK-1-1::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.ATTACK-1-2 {max-width:96px; max-height:84px; }
+.ATTACK-1-2::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 50% 0.234192037470726%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.ATTACK-1-2::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.ATTACK-1-3 {max-width:96px; max-height:84px; }
+.ATTACK-1-3::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 74.87179487179488% 0.234192037470726%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.ATTACK-1-3::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.ATTACK-1-4 {max-width:96px; max-height:84px; }
+.ATTACK-1-4::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 99.74358974358974% 0.234192037470726%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.ATTACK-1-4::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.ATTACK-1-5 {max-width:96px; max-height:84px; }
+.ATTACK-1-5::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 0.2564102564102564% 20.140515222482435%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.ATTACK-1-5::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.DEATH-0 {max-width:96px; max-height:84px; }
+.DEATH-0::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 0.2564102564102564% 40.04683840749414%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.DEATH-0::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.DEATH-1 {max-width:96px; max-height:84px; }
+.DEATH-1::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 0.2564102564102564% 59.95316159250586%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.DEATH-1::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.DEATH-10 {max-width:96px; max-height:84px; }
+.DEATH-10::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 25.128205128205128% 79.85948477751757%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.DEATH-10::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.DEATH-11 {max-width:96px; max-height:84px; }
+.DEATH-11::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 25.128205128205128% 99.76580796252928%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.DEATH-11::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.DEATH-2 {max-width:96px; max-height:84px; }
+.DEATH-2::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 0.2564102564102564% 79.85948477751757%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.DEATH-2::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.DEATH-3 {max-width:96px; max-height:84px; }
+.DEATH-3::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 0.2564102564102564% 99.76580796252928%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.DEATH-3::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.DEATH-4 {max-width:96px; max-height:84px; }
+.DEATH-4::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 25.128205128205128% 20.140515222482435%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.DEATH-4::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.DEATH-5 {max-width:96px; max-height:84px; }
+.DEATH-5::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 50% 20.140515222482435%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.DEATH-5::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.DEATH-6 {max-width:96px; max-height:84px; }
+.DEATH-6::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 74.87179487179488% 20.140515222482435%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.DEATH-6::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.DEATH-7 {max-width:96px; max-height:84px; }
+.DEATH-7::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 99.74358974358974% 20.140515222482435%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.DEATH-7::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.DEATH-8 {max-width:96px; max-height:84px; }
+.DEATH-8::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 25.128205128205128% 40.04683840749414%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.DEATH-8::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.DEATH-9 {max-width:96px; max-height:84px; }
+.DEATH-9::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 25.128205128205128% 59.95316159250586%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.DEATH-9::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.HURT-0 {max-width:96px; max-height:84px; }
+.HURT-0::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 50% 40.04683840749414%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.HURT-0::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.HURT-1 {max-width:96px; max-height:84px; }
+.HURT-1::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 74.87179487179488% 40.04683840749414%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.HURT-1::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.HURT-2 {max-width:96px; max-height:84px; }
+.HURT-2::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 99.74358974358974% 40.04683840749414%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.HURT-2::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.HURT-3 {max-width:96px; max-height:84px; }
+.HURT-3::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 50% 59.95316159250586%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.HURT-3::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.IDLE-0 {max-width:96px; max-height:84px; }
+.IDLE-0::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 50% 79.85948477751757%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.IDLE-0::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.IDLE-1 {max-width:96px; max-height:84px; }
+.IDLE-1::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 50% 99.76580796252928%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.IDLE-1::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.IDLE-2 {max-width:96px; max-height:84px; }
+.IDLE-2::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 74.87179487179488% 59.95316159250586%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.IDLE-2::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.IDLE-3 {max-width:96px; max-height:84px; }
+.IDLE-3::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 99.74358974358974% 59.95316159250586%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.IDLE-3::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.IDLE-4 {max-width:96px; max-height:84px; }
+.IDLE-4::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 74.87179487179488% 79.85948477751757%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.IDLE-4::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.IDLE-5 {max-width:96px; max-height:84px; }
+.IDLE-5::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 74.87179487179488% 99.76580796252928%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.IDLE-5::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+.IDLE-6 {max-width:96px; max-height:84px; }
+.IDLE-6::after {content: '\00a0';display: inline-block; width:96px; height:84px; background-position: 99.74358974358974% 79.85948477751757%; background-size: 506.25% 608.3333333333334%; background-image: url(Knight-Battle.png);padding: 0; }
+div.IDLE-6::after {max-width:96px; width:100%;height:0;padding: 0 0 87.5% 0;}
+
+@keyframes ATTACK-1 {
+    0% { background-position: 0.2564102564102564% 0.234192037470726%;  }
+    16.666666666666664% { background-position: 25.128205128205128% 0.234192037470726%;  }
+    33.33333333333333% { background-position: 50% 0.234192037470726%;  }
+    50% { background-position: 74.87179487179488% 0.234192037470726%;  }
+    66.66666666666666% { background-position: 99.74358974358974% 0.234192037470726%;  }
+    83.33333333333334% { background-position: 0.2564102564102564% 20.140515222482435%;  }
+}
+
+.ATTACK-1-animation {
+    max-width: 96px;
+    max-height: 84px;
+}
+.ATTACK-1-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 96px;
+    height: 84px;
+    padding: 0;
+    background-image: url(Knight-Battle.png);
+    background-size: 506.25% 608.3333333333334%;
+    animation-name: ATTACK-1;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+div.ATTACK-1-animation::after {
+    max-width: 96px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 87.5% 0;
+}
+
+@keyframes DEATH {
+    0% { background-position: 0.2564102564102564% 40.04683840749414%;  }
+    8.333333333333332% { background-position: 0.2564102564102564% 59.95316159250586%;  }
+    16.666666666666664% { background-position: 0.2564102564102564% 79.85948477751757%;  }
+    25% { background-position: 0.2564102564102564% 99.76580796252928%;  }
+    33.33333333333333% { background-position: 25.128205128205128% 20.140515222482435%;  }
+    41.66666666666667% { background-position: 50% 20.140515222482435%;  }
+    50% { background-position: 74.87179487179488% 20.140515222482435%;  }
+    58.333333333333336% { background-position: 99.74358974358974% 20.140515222482435%;  }
+    66.66666666666666% { background-position: 25.128205128205128% 40.04683840749414%;  }
+    75% { background-position: 25.128205128205128% 59.95316159250586%;  }
+    83.33333333333334% { background-position: 25.128205128205128% 79.85948477751757%;  }
+    91.66666666666666% { background-position: 25.128205128205128% 99.76580796252928%;  }
+}
+
+.DEATH-animation {
+    max-width: 96px;
+    max-height: 84px;
+}
+.DEATH-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 96px;
+    height: 84px;
+    padding: 0;
+    background-image: url(Knight-Battle.png);
+    background-size: 506.25% 608.3333333333334%;
+    animation-name: DEATH;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+div.DEATH-animation::after {
+    max-width: 96px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 87.5% 0;
+}
+
+@keyframes HURT {
+    0% { background-position: 50% 40.04683840749414%;  }
+    25% { background-position: 74.87179487179488% 40.04683840749414%;  }
+    50% { background-position: 99.74358974358974% 40.04683840749414%;  }
+    75% { background-position: 50% 59.95316159250586%;  }
+}
+
+.HURT-animation {
+    max-width: 96px;
+    max-height: 84px;
+}
+.HURT-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 96px;
+    height: 84px;
+    padding: 0;
+    background-image: url(Knight-Battle.png);
+    background-size: 506.25% 608.3333333333334%;
+    animation-name: HURT;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+div.HURT-animation::after {
+    max-width: 96px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 87.5% 0;
+}
+
+@keyframes IDLE {
+    0% { background-position: 50% 79.85948477751757%;  }
+    14.285714285714285% { background-position: 50% 99.76580796252928%;  }
+    28.57142857142857% { background-position: 74.87179487179488% 59.95316159250586%;  }
+    42.857142857142854% { background-position: 99.74358974358974% 59.95316159250586%;  }
+    57.14285714285714% { background-position: 74.87179487179488% 79.85948477751757%;  }
+    71.42857142857143% { background-position: 74.87179487179488% 99.76580796252928%;  }
+    85.71428571428571% { background-position: 99.74358974358974% 79.85948477751757%;  }
+}
+
+.IDLE-animation {
+    max-width: 96px;
+    max-height: 84px;
+}
+.IDLE-animation::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 96px;
+    height: 84px;
+    padding: 0;
+    background-image: url(Knight-Battle.png);
+    background-size: 506.25% 608.3333333333334%;
+    animation-name: IDLE;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+div.IDLE-animation::after {
+    max-width: 96px;
+    width: 100%;
+    height: 0;
+    padding: 0 0 87.5% 0;
+}
+
+/* $TexturePacker:SmartUpdate:549daaebe5548f2fbdf3d264db2ce0a8:a77eda5a5a20d2c1baf516b81a1557a3:2f4c8dd5a1a232a5fd87dbdcc00c5ed5$ */
