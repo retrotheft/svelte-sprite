@@ -14,8 +14,6 @@
 <style>
    main {
       display: grid;
-      grid-auto-flow: column;
-      grid-template-rows: 1rem 1fr;
       grid-template-columns: 48px 40px;
       justify-items: center;
       align-self: end;

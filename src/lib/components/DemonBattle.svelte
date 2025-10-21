@@ -5,10 +5,13 @@
    import Progress from "./Progress.svelte";
    import { fly } from "svelte/transition";
    import { getSceneContext } from '$lib/contexts/scene.js'
+   import Sprite from "./Sprite.svelte";
 
    let { attack, endBattle } = $props();
 
    const { FRAME_DURATION } = getSceneContext()
+
+   const MAX_HP = 2
 
    const STATES = {
       ["DEMON-IDLE"]: 4,
@@ -23,7 +26,7 @@
       },
    );
 
-   let hp = $state(2);
+   let hp = $state(MAX_HP);
    let idleFrames = $state(0);
 
    function idleLoop(frames: number) {
@@ -58,5 +61,9 @@
    });
 </script>
 
-<Progress max="2" value={hp} />
-<div in:fly={{ x: 100 }} {@attach sprite("DEMON-IDLE")} {...anim}></div>
+<!-- <div in:fly={{ x: 100 }} {@attach sprite("DEMON-IDLE")} {...anim}>
+   <Progress max={MAX_HP} value={hp} />
+</div> -->
+<Sprite {@attach sprite("DEMON-IDLE")} {...anim} enter>
+   <Progress max={MAX_HP} value={hp} />
+</Sprite>

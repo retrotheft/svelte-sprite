@@ -5,6 +5,12 @@
 <progress {max} {value} style={`--color: ${color};`}></progress>
 
 <style>
+   progress {
+      position: absolute;
+      bottom: 100%;
+      justify-self: center;
+   }
+
    progress[value] {
       -webkit-appearance: none;
       appearance: none;

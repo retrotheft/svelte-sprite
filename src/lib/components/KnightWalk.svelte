@@ -2,6 +2,7 @@
    import '../assets/Knight-Walk.css'
    import { createSprite } from '$lib/dollar-stores/sprite.js'
    import { createAnimationHandler } from '$lib/attachments/animations.svelte.js';
+   import Sprite from './Sprite.svelte';
 
    let { startBattle } = $props()
 
@@ -10,7 +11,7 @@
       height: '84px'
    })
 
-   const STATES = ['WALK']
+   const STATES = { WALK: 8 }
 
    let steps = $state(0)
 
@@ -24,4 +25,4 @@
    })
 </script>
 
-<div {@attach sprite('WALK')} {...anim} ></div>
+<Sprite {@attach sprite('WALK')} {...anim} />

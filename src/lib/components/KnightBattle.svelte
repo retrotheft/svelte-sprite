@@ -4,10 +4,13 @@
    import { createAnimationHandler } from '$lib/attachments/animations.svelte.js';
    import Progress from '$lib/components/Progress.svelte'
    import { getSceneContext } from '$lib/contexts/scene.js';
+   import Sprite from './Sprite.svelte';
 
    let { attack, endGame } = $props()
 
    const { FRAME_DURATION } = getSceneContext()
+
+   const MAX_HP = 3
 
    const STATES = {
       ['ATTACK-1']: 6,
@@ -21,15 +24,9 @@
       height: '84px'
    })
 
-   let hp = $state(3)
+   let hp = $state(MAX_HP)
 
    let idleFrames = $state(0)
-
-   // should build this off the sprite object so we have exhaustive safety making us implement each state
-   // though actually the sprite currently doesn't know about its own states... probably should though
-   // then we could just return an error if anyone tried to set an unknown state
-   // const stateMachine = createStateMachine(states)
-   // stateMachine.setup() <-- this would then be typesafe
 
    function idleLoop(frames: number) {
       idleFrames += frames
@@ -62,11 +59,8 @@
          end: () => endGame()
       }
    })
-
-   // animation handler routes each animationevent to stateMachine[animationName].hook
-   // need an elegant way to make cancelable (is the presence of cancel enough?)
-   // {@attach animationHandler(stateMachine)}
 </script>
 
-<Progress max={3} value={hp} />
-<div {@attach sprite("IDLE")} {...anim}></div>
+<Sprite {@attach sprite("IDLE")} {...anim}>
+   <Progress max={MAX_HP} value={hp} />
+</Sprite>

@@ -1,4 +1,3 @@
 # Todo
 
-- [ ] rename state machine to something else
-- [ ] add vital to event handler args
+- [x] Make wrapper component for scene (to set custom variables and context)

@@ -37,9 +37,7 @@
 <Scene FRAME_DURATION={75}>
    {#key gameNum}
       {#if mode === 'walk'}
-         <span></span>
          <KnightWalk {startBattle} />
-         <div></div>
          <div></div>
          <!-- <DemonFlying /> -->
       {:else}
@@ -51,8 +49,6 @@
 <footer>Enemies Killed: { enemiesKilled }</footer>
 
 <style>
-
-
    footer {
       align-self: start;
       font-family: monospace;
