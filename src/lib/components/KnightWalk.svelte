@@ -5,7 +5,7 @@
 
    let { startBattle } = $props()
 
-   const sprite = createSprite({
+   const sprite = createSprite(['WALK'] as const, {
       width: '96px',
       height: '84px'
    })
