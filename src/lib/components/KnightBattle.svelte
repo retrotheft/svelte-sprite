@@ -1,7 +1,7 @@
 <script lang="ts">
    import '../assets/Knight-Battle.css'
    import { createSprite } from '$lib/dollar-stores/sprite.js'
-   import { createStateMachine } from '$lib/attachments/state-machine.svelte.js';
+   import { createAnimationHandler } from '$lib/attachments/animations.svelte.js';
    import Progress from '$lib/components/Progress.svelte'
 
    let { attack, endGame } = $props()
@@ -15,21 +15,18 @@
 
    let count = $state(0)
 
-   const states = ['ATTACK-1', 'IDLE', 'HURT', 'DEATH']
+   // should build this off the sprite object so we have exhaustive safety making us implement each state
+   // though actually the sprite currently doesn't know about its own states... probably should though
+   // then we could just return an error if anyone tried to set an unknown state
+   // const stateMachine = createStateMachine(states)
+   // stateMachine.setup() <-- this would then be typesafe
 
-   const sm = createStateMachine({ hp: 10 }, {
-      iterate:(event, hp) => {
-         count++
-         if (count < 3) return
-         count = 0
-         $sprite = "ATTACK-1"
-      },
-      end: (event, hp) => {
-         if (event.animationName === "DEATH") return endGame()
-         if (event.animationName === "ATTACK-1") attack(1)
-         $sprite = 'IDLE'
-      }
-   })
+   function loop() {
+      count++
+      if (count < 3) return
+      count = 0
+      $sprite = 'ATTACK-1'
+   }
 
    export function hit(dmg: number) {
       $sprite = "HURT"
@@ -37,7 +34,33 @@
       if (hp > 0) return
       $sprite = 'DEATH'
    }
+
+   // const states = ['ATTACK-1', 'IDLE', 'HURT', 'DEATH']
+
+   const stateMachine = {
+      IDLE: {
+         iterate: () => loop(),
+         cancel: () => {}
+      },
+      ['ATTACK-1']: {
+         start: () => setTimeout(() => attack(1), 270),
+         end: () => $sprite = "IDLE",
+         cancel: () => {}
+      },
+      HURT: {
+         end: () => $sprite = "IDLE",
+      },
+      DEATH: {
+         end: () => endGame()
+      },
+   }
+
+   const anim = createAnimationHandler(stateMachine)
+
+   // animation handler routes each animationevent to stateMachine[animationName].hook
+   // need an elegant way to make cancelable (is the presence of cancel enough?)
+   // {@attach animationHandler(stateMachine)}
 </script>
 
 <Progress max={3} value={hp} />
-<div {@attach sprite('IDLE')} {...sm}></div>
+<div {@attach sprite("IDLE")} {...anim}></div>

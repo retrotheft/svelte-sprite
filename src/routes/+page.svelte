@@ -54,13 +54,16 @@
       display: grid;
       grid-auto-flow: column;
       grid-template-rows: 1rem 1fr;
-      grid-template-columns: 96px 81px;
+      grid-template-columns: 48px 40px;
       justify-items: center;
       align-self: end;
+      transform: scale(1.5);
+      transform-origin: center;
    }
 
    footer {
       align-self: start;
       font-family: monospace;
+      text-align: center;
    }
 </style>

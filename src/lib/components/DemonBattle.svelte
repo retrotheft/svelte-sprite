@@ -1,8 +1,9 @@
 <script lang="ts">
    import '../assets/Demon-Battle.css'
    import { createSprite } from '$lib/dollar-stores/sprite.js'
-   import { createStateMachine } from '$lib/attachments/state-machine.svelte.js';
+   import { createAnimationHandler } from '$lib/attachments/animations.svelte.js';
    import Progress from './Progress.svelte';
+   import { fly } from 'svelte/transition';
 
    let { attack, endBattle } = $props()
 
@@ -14,31 +15,44 @@
    let hp = $state(2)
    let count = $state(0)
 
-   const sm = createStateMachine({ hp: 10}, {
-      iterate: (event, hp) => {
-         count++
-         if (count < 4) return
-         count = 0
-         if ($sprite === "DEMON-DEATH") return
-         // can still interrupt the hurt animation, which works gameplay-wise
-         $sprite = "DEMON-ATTACK"
-      },
-      end: (event, hp) => {
-         if (event.animationName === "DEMON-DEATH") return endBattle()
-         if (event.animationName === "DEMON-ATTACK") attack(1)
-         $sprite = "DEMON-IDLE"
-      }
-   })
+   // const states = ['DEMON-IDLE', 'DEMON-ATTACK', 'DEMON-HURT', 'DEMON-DEATH']
+
+   function loop() {
+      count++
+      if (count < 4) return
+      count = 0
+      // if ($sprite === 'DEMON-DEATH') return
+      $sprite = 'DEMON-ATTACK'
+   }
 
    export function hit(dmg: number) {
       $sprite = "DEMON-HURT"
       hp--
       if (hp <= 0) $sprite = "DEMON-DEATH"
    }
+
+   const anim = createAnimationHandler({
+      ['DEMON-IDLE']: {
+         iterate: () => loop(),
+         cancel: () => {}
+      },
+      ['DEMON-ATTACK']: {
+         start: () => setTimeout(() => attack(1), 270),
+         end: () => $sprite = "DEMON-IDLE"
+      },
+      ['DEMON-HURT']: {
+         end: () => $sprite = "DEMON-IDLE"
+      },
+      ['DEMON-DEATH']: {
+         end: () => endBattle()
+      }
+   })
+
+
 </script>
 
 <Progress max="2" value={hp} />
-<div {@attach sprite('DEMON-IDLE')} {...sm}></div>
+<div in:fly={{ x: 100 }} {@attach sprite('DEMON-IDLE')} {...anim}></div>
 
 <style>
    :global(div::after) {
