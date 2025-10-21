@@ -18,35 +18,35 @@ function assertIsHTMLElement(element: unknown): asserts element is HTMLElement {
   }
 }
 
-type SpriteFactory = {
-   (_state: string): Attachment
-} & StoreContract<string>
+type SpriteFactory<T extends string> = {
+   (_state: T): Attachment
+} & StoreContract<T>
 
-export function createSprite(options: Options): SpriteFactory {
-   let state = ''
-   const subscribers = new Set<(value: string) => void>()
+export function createSprite<const T extends readonly string[]>(states: T, options: Options): SpriteFactory<T[number]> {
+   let state = states[0] as T[number]
+   const subscribers = new Set<(value: T[number]) => void>()
 
    function notifySubscribers(): void {
       subscribers.forEach(callback => callback(state))
    }
 
-   const store: StoreContract<string> = {
-      subscribe: (callback: (value: string) => void) => {
+   const store: StoreContract<T[number]> = {
+      subscribe: (callback: (value: T[number]) => void) => {
          subscribers.add(callback)
          callback(state)
          return () => subscribers.delete(callback)
       },
-      set: (newState: string) => {
+      set: (newState: T[number]) => {
          state = newState
          notifySubscribers()
       },
-      update: (fn: (current: string) => string) => {
+      update: (fn: (current: T[number]) => T[number]) => {
          state = fn(state)
          notifySubscribers()
       }
    }
 
-   const attachmentFactory = (_state: string) => {
+   const attachmentFactory = (_state: T[number]) => {
       untrack(() => store.set(_state))
       // store.set(_state)
       return (element: Element) => {
@@ -54,7 +54,7 @@ export function createSprite(options: Options): SpriteFactory {
          assertIsHTMLElement(element)
          element.style.width = options.width
          element.style.height = options.height
-         const callback = (_state: string) => {
+         const callback = (_state: T[number]) => {
             element.className = `${_state}-animation`
          }
          const unsubscribe = store.subscribe(callback)
@@ -67,5 +67,5 @@ export function createSprite(options: Options): SpriteFactory {
       defineProperty(attachmentFactory, key, { value })
    }
 
-   return attachmentFactory as SpriteFactory
+   return attachmentFactory as SpriteFactory<T[number]>
 }

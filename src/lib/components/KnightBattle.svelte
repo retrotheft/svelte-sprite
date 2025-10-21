@@ -6,7 +6,9 @@
 
    let { attack, endGame } = $props()
 
-   const sprite = createSprite({
+   const sprite = createSprite(
+   ['ATTACK-1', 'IDLE', 'HURT', 'DEATH'] as const,
+   {
       width: '96px',
       height: '84px'
    })
@@ -35,7 +37,7 @@
       $sprite = 'DEATH'
    }
 
-   // const states = ['ATTACK-1', 'IDLE', 'HURT', 'DEATH']
+   // const states =
 
    const stateMachine = {
       IDLE: {
