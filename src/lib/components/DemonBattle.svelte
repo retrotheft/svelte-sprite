@@ -19,6 +19,8 @@
          count++
          if (count < 4) return
          count = 0
+         if ($sprite === "DEMON-DEATH") return
+         // can still interrupt the hurt animation, which works gameplay-wise
          $sprite = "DEMON-ATTACK"
       },
       end: (event, hp) => {
