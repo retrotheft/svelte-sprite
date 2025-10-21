@@ -4,6 +4,7 @@
    import DemonFlying from "$lib/components/DemonFlying.svelte";
    import DemonBattle from "$lib/components/DemonBattle.svelte";
    import { type SvelteComponent } from 'svelte'
+   import Scene from '$lib/components/Scene.svelte'
 
    let knight = $state<SvelteComponent>()
    let demon = $state<SvelteComponent>()
@@ -31,11 +32,9 @@
       mode = 'walk'
       enemiesKilled = 0
    }
-
-   const FRAME_DURATION = 75
 </script>
 
-<main style={`--frame-duration: ${FRAME_DURATION}ms;`}>
+<Scene FRAME_DURATION={75}>
    {#key gameNum}
       {#if mode === 'walk'}
          <span></span>
@@ -44,24 +43,15 @@
          <div></div>
          <!-- <DemonFlying /> -->
       {:else}
-         <KnightBattle attack={attack("KNIGHT")} bind:this={knight} {endGame} {FRAME_DURATION} />
-         <DemonBattle attack={attack("DEMON")} bind:this={demon} {endBattle} {FRAME_DURATION} />
+         <KnightBattle attack={attack("KNIGHT")} bind:this={knight} {endGame} />
+         <DemonBattle attack={attack("DEMON")} bind:this={demon} {endBattle} />
       {/if}
    {/key}
-</main>
+</Scene>
 <footer>Enemies Killed: { enemiesKilled }</footer>
 
 <style>
-   main {
-      display: grid;
-      grid-auto-flow: column;
-      grid-template-rows: 1rem 1fr;
-      grid-template-columns: 48px 40px;
-      justify-items: center;
-      align-self: end;
-      transform: scale(1.5);
-      transform-origin: center;
-   }
+
 
    footer {
       align-self: start;

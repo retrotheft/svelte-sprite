@@ -3,27 +3,27 @@
    import { createSprite } from '$lib/dollar-stores/sprite.js'
    import { createAnimationHandler } from '$lib/attachments/animations.svelte.js';
    import Progress from '$lib/components/Progress.svelte'
+   import { getSceneContext } from '$lib/contexts/scene.js';
 
-   let { attack, endGame, FRAME_DURATION } = $props()
+   let { attack, endGame } = $props()
 
-   const STATES_WITH_FRAMES = {
+   const { FRAME_DURATION } = getSceneContext()
+
+   const STATES = {
       ['ATTACK-1']: 6,
       IDLE: 7,
       HURT: 4,
       DEATH: 12
    } as const
 
-   const STATES = ['ATTACK-1', 'IDLE', 'HURT', 'DEATH'] as const
-   const TIME_PER_FRAME = 500 // also set in +page.svelte for now
-
-   const sprite = createSprite(STATES_WITH_FRAMES, {
+   const sprite = createSprite(STATES, {
       width: '96px',
       height: '84px'
    })
 
    let hp = $state(3)
 
-   let count = $state(0)
+   let idleFrames = $state(0)
 
    // should build this off the sprite object so we have exhaustive safety making us implement each state
    // though actually the sprite currently doesn't know about its own states... probably should though
@@ -31,10 +31,10 @@
    // const stateMachine = createStateMachine(states)
    // stateMachine.setup() <-- this would then be typesafe
 
-   function loop() {
-      count++
-      if (count < 3) return
-      count = 0
+   function idleLoop(frames: number) {
+      idleFrames += frames
+      if (idleFrames < frames * 2) return
+      idleFrames = 0
       $sprite = 'ATTACK-1'
    }
 
@@ -47,7 +47,7 @@
 
    const anim = createAnimationHandler(STATES, {
       IDLE: {
-         iterate: () => loop(),
+         iterate: (_, numFrames) => idleLoop(numFrames),
          cancel: () => {}
       },
       ['ATTACK-1']: {

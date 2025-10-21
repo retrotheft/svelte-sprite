@@ -4,30 +4,32 @@
    import { createAnimationHandler } from "$lib/attachments/animations.svelte.js";
    import Progress from "./Progress.svelte";
    import { fly } from "svelte/transition";
+   import { getSceneContext } from '$lib/contexts/scene.js'
 
-   let { attack, endBattle, FRAME_DURATION } = $props();
+   let { attack, endBattle } = $props();
 
-   const STATES_WITH_FRAMES = {
+   const { FRAME_DURATION } = getSceneContext()
+
+   const STATES = {
       ["DEMON-IDLE"]: 4,
       ["DEMON-HURT"]: 4,
       ["DEMON-ATTACK"]: 8,
       ["DEMON-DEATH"]: 6
    }
-   const STATES = ["DEMON-IDLE", "DEMON-ATTACK", "DEMON-HURT", "DEMON-DEATH"] as const
 
-   const sprite = createSprite(STATES_WITH_FRAMES, {
+   const sprite = createSprite(STATES, {
          width: "81px",
          height: "71px",
       },
    );
 
    let hp = $state(2);
-   let count = $state(0);
+   let idleFrames = $state(0);
 
-   function loop() {
-      count++;
-      if (count < 4) return;
-      count = 0;
+   function idleLoop(frames: number) {
+      idleFrames += frames;
+      if (idleFrames < frames * 3) return;
+      idleFrames = 0;
       // if ($sprite === 'DEMON-DEATH') return
       $sprite = "DEMON-ATTACK";
    }
@@ -40,7 +42,7 @@
 
    const anim = createAnimationHandler(STATES, {
       ["DEMON-IDLE"]: {
-         iterate: () => loop(),
+         iterate: (_, numFrames) => idleLoop(numFrames),
          cancel: () => {},
       },
       ["DEMON-ATTACK"]: {

@@ -1,4 +1,6 @@
-type AnimationHook = (e: AnimationEvent) => void
+type StatesWithFrames = Record<string, number>
+
+type AnimationHook = (e: AnimationEvent, frames: number) => void
 
 type HookConfig = {
    start?: AnimationHook,
@@ -7,8 +9,8 @@ type HookConfig = {
    iterate?: AnimationHook
 }
 
-type Hooks<T extends readonly string[]> = {
-   [K in T[number]]?: HookConfig
+type Hooks<T extends StatesWithFrames> = {
+   [K in keyof T]?: HookConfig
 }
 
 type Handlers = {
@@ -18,14 +20,32 @@ type Handlers = {
    onanimationiteration?: (e: AnimationEvent) => void
 }
 
-export function createAnimationHandler<const T extends readonly string[]>(
-   states: T, hooks: Hooks<T>): Handlers {
+export function createAnimationHandler<const T extends StatesWithFrames>(
+   statesWithFrames: T,
+   hooks: Hooks<T>
+): Handlers {
+   type State = keyof T & string
+
    const handlers: Handlers = {}
-
-   handlers.onanimationstart = e => hooks[e.animationName as T[number]]?.start?.(e)
-   handlers.onanimationend = e => hooks[e.animationName as T[number]]?.end?.(e)
-   handlers.onanimationiteration = e => hooks[e.animationName as T[number]]?.iterate?.(e)
-   handlers.onanimationcancel = e => hooks[e.animationName as T[number]]?.cancel?.(e)
-
+   handlers.onanimationstart = e => {
+      const state = e.animationName as State
+      const frames = statesWithFrames[state]
+      hooks[state]?.start?.(e, frames)
+   }
+   handlers.onanimationend = e => {
+      const state = e.animationName as State
+      const frames = statesWithFrames[state]
+      hooks[state]?.end?.(e, frames)
+   }
+   handlers.onanimationiteration = e => {
+      const state = e.animationName as State
+      const frames = statesWithFrames[state]
+      hooks[state]?.iterate?.(e, frames)
+   }
+   handlers.onanimationcancel = e => {
+      const state = e.animationName as State
+      const frames = statesWithFrames[state]
+      hooks[state]?.cancel?.(e, frames)
+   }
    return handlers
 }

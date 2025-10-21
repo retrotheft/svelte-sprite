@@ -3,3 +3,8 @@ export interface StoreContract<T> {
   set: (newValue: T) => void;
   update: (fn: (current: T) => T) => void;
 }
+
+
+export interface SceneContext {
+   FRAME_DURATION: number
+}
