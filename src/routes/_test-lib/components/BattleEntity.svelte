@@ -22,6 +22,7 @@
 
    let hp = $state(config.maxHp)
    let idleFrames = $state(0)
+   let attackTimeoutId = $state<number>()
 
    function idleLoop(frames: number) {
       idleFrames += frames
@@ -42,9 +43,9 @@
          cancel: () => {}
       },
       [config.attackState]: {
-         start: () => setTimeout(() => attack(1), FRAME_DURATION * config.attackDelay),
+         start: () => attackTimeoutId = setTimeout(() => attack(1), FRAME_DURATION * config.attackDelay),
          end: () => $sprite = config.idleState,
-         cancel: () => {}
+         cancel: () => clearTimeout(attackTimeoutId)
       },
       [config.hurtState]: {
          end: () => $sprite = config.idleState,
