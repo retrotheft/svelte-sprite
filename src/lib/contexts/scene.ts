@@ -1,4 +1,7 @@
 import { createContext } from "svelte";
-import { type SceneContext } from "$lib/types/index.js";
+
+interface SceneContext {
+   FRAME_DURATION: number
+}
 
 export const [ getSceneContext, setSceneContext ] = createContext<SceneContext>()

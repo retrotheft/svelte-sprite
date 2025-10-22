@@ -6,8 +6,8 @@ export interface BattleEntityConfig {
    attackState: string;
    hurtState: string;
    deathState: string;
-   idleLoopMultiplier: number;
-   attackDelay: number;
+   idleLoopMultiplier: number; // idle loops before attack
+   attackDelay: number; // time before collision on attack animation
 }
 
 export const knightConfig: BattleEntityConfig = {
