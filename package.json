@@ -1,6 +1,27 @@
 {
 	"name": "svelte-sprite",
 	"version": "0.0.1",
+	"description": "A Svelte 5 sprite animation library for building game entities with frame-based animations",
+	"author": "Jim Bridger",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/retrotheft/svelte-sprite.git"
+	},
+	"bugs": {
+		"url": "https://github.com/retrotheft/svelte-sprite/issues"
+	},
+	"homepage": "https://github.com/retrotheft/svelte-sprite#readme",
+	"keywords": [
+		"svelte",
+		"svelte5",
+		"sprite",
+		"animation",
+		"game",
+		"sprites",
+		"spritesheet",
+		"game-dev"
+	],
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
@@ -8,7 +29,7 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"prepack": "svelte-kit sync && svelte-package && publint",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
 	},
 	"files": [
 		"dist",
@@ -41,15 +62,9 @@
 		"typescript": "^5.9.2",
 		"vite": "^7.1.7"
 	},
-	"keywords": [
-		"svelte"
-	],
 	"pnpm": {
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
-	},
-	"dependencies": {
-		"random": "^5.4.1"
 	}
 }

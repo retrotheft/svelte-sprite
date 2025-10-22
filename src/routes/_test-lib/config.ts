@@ -41,6 +41,6 @@ export const demonConfig: BattleEntityConfig = {
    attackState: "DEMON-ATTACK",
    hurtState: "DEMON-HURT",
    deathState: "DEMON-DEATH",
-   idleLoopMultiplier: 3,
+   idleLoopMultiplier: 4,
    attackDelay: 3
 };

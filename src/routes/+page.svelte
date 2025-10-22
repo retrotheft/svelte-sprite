@@ -6,7 +6,7 @@
    import BattleEntity from "./_test-lib/components/BattleEntity.svelte";
    import { knightConfig, demonConfig } from "./_test-lib/config.js";
    import { type SvelteComponent } from 'svelte'
-   import Scene from '$lib/components/Scene.svelte'
+   import { Scene } from '$lib/index.js'
 
    let knight = $state<SvelteComponent>()
    let demon = $state<SvelteComponent>()

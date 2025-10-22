@@ -1,10 +1,6 @@
 
 <script lang="ts">
-   import { createSprite } from '$lib/sprite.js'
-   import { createAnimationHandler } from '$lib/animations.svelte.js';
-   import { getSceneContext } from '$lib/contexts/scene.js';
-   import Progress from '$lib/components/Progress.svelte'
-   import Sprite from '$lib/components/Sprite.svelte';
+   import { createSprite, createAnimationHandler, getSceneContext, Progress, Sprite } from '$lib/index.js'
    import { type BattleEntityConfig } from '../config.js';
 
    interface Props {
