@@ -1,0 +1,129 @@
+.character {
+   width: 80px;
+   height: 64px;
+}
+
+.character[data-flip="true"]:not(.overlay) {
+   transform: scaleX(-1);
+}
+
+.character::after {
+   content: '\00a0';
+   display: inline-block;
+   width: 80px;
+   height: 64px;
+   padding: 0;
+   background-image: var(--url);
+   background-size: 1000% 700%;
+   animation-timing-function: steps(1);
+}
+
+.character::after {
+   max-width: 80px;
+   width: 100%;
+   height: 0;
+   padding: 0 0 80% 0;
+}
+
+.IDLE::after {
+   animation-name: IDLE;
+   animation-iteration-count: infinite;
+}
+
+.WALK::after {
+   animation-name: WALK;
+   animation-iteration-count: infinite;
+}
+
+.RUN::after {
+   animation-name: RUN;
+   animation-iteration-count: infinite;
+}
+
+.JUMP::after {
+   animation-name: JUMP;
+   animation-iteration-count: infinite;
+}
+
+.FALL::after {
+   animation-name: FALL;
+   animation-iteration-count: infinite;
+}
+
+.USE::after {
+   animation-name: USE;
+   animation-iteration-count: infinite;
+}
+
+.DEATH::after {
+   animation-name: DEATH;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+}
+
+@keyframes IDLE {
+   0% { background-position: 0 0; }
+   20% { background-position: -80px 0; }
+   40% { background-position: -160px 0; }
+   60% { background-position: -240px 0; }
+   80% { background-position: -320px 0; }
+}
+
+@keyframes WALK {
+   0% { background-position: 0 -64px; }
+   12.5% { background-position: -80px -64px; }
+   25% { background-position: -160px -64px; }
+   37.5% { background-position: -240px -64px; }
+   50% { background-position: -320px -64px; }
+   62.5% { background-position: -400px -64px; }
+   75% { background-position: -480px -64px; }
+   87.5% { background-position: -560px -64px; }
+}
+
+@keyframes RUN {
+   0% { background-position: 0 -128px; }
+   12.5% { background-position: -80px -128px; }
+   25% { background-position: -160px -128px; }
+   37.5% { background-position: -240px -128px; }
+   50% { background-position: -320px -128px; }
+   62.5% { background-position: -400px -128px; }
+   75% { background-position: -480px -128px; }
+   87.5% { background-position: -560px -128px; }
+}
+
+@keyframes JUMP {
+   0% { background-position: 0 -192px; }
+   25% { background-position: -80px -192px; }
+   50% { background-position: -160px -192px; }
+   75% { background-position: -240px -192px; }
+}
+
+@keyframes FALL {
+   0% { background-position: 0 -256px; }
+   25% { background-position: -80px -256px; }
+   50% { background-position: -160px -256px; }
+   75% { background-position: -240px -256px; }
+}
+
+@keyframes USE {
+   0% { background-position: 0 -320px;  }
+   16.666666666666664% { background-position: -80px -320px; }
+   33.33333333333333% { background-position: -160px -320px; }
+   50% { background-position: -240px -320px; }
+   66.66666666666666% { background-position: -320px -320px; }
+   83.33333333333334% { background-position: -400px -320px; }
+}
+
+@keyframes DEATH {
+   0% { background-position: 0 -384px; }
+   10% { background-position: -80px -384px; }
+   20% { background-position: -160px -384px; }
+   30% { background-position: -240px -384px; }
+   40% { background-position: -320px -384px; }
+   50% { background-position: -400px -384px; }
+   60% { background-position: -480px -384px; }
+   70% { background-position: -560px -384px; }
+   80% { background-position: -640px -384px; }
+   90% { background-position: -720px -384px; }
+   100% { background-position: -720px -384px; }
+}

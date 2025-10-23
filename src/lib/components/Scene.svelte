@@ -7,17 +7,20 @@
    setSceneContext({ FRAME_DURATION })
 </script>
 
-<main style={`--frame-duration: ${FRAME_DURATION}ms;`}>
+<div class="scene" style={`--frame-duration: ${FRAME_DURATION}ms;`}>
    {@render children?.()}
-</main>
+</div>
 
 <style>
-   main {
+   div.scene {
       display: grid;
       grid-template-columns: 48px 40px;
       justify-items: center;
-      align-self: end;
-      transform: scale(1.5);
+      align-self: center;
+      /*transform: scale(1.5);*/
       transform-origin: center;
+      position: absolute;
+      bottom: 32px;
+      left: 480px;
    }
 </style>

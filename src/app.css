@@ -11,3 +11,8 @@ body {
 div#app {
    display: contents;
 }
+
+
+div[data-sprite="true"] {
+   overflow: visible;
+}
